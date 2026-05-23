@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Michell Camila Pérez Ortiz | Asistencia Administrativa Profesional</title>
-    <!-- Tailwind CSS -->
+    
+    <!-- Tailwind CSS para Estilos Rápidos y Responsivos -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -23,9 +24,6 @@
                             800: '#075189',
                             900: '#0c4472',
                             950: '#082b4b',
-                        },
-                        neutral: {
-                            850: '#1f293d'
                         }
                     },
                     fontFamily: {
@@ -35,21 +33,40 @@
             }
         }
     </script>
-    <!-- Google Fonts: Inter -->
+    
+    <!-- Google Fonts: Inter para tipografía moderna y altamente legible -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <!-- Font Awesome Icons -->
+    
+    <!-- Font Awesome para Iconos Profesionales de Alta Calidad -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
         body {
             font-family: 'Inter', sans-serif;
         }
+        
+        /* Efecto esmerilado translúcido para la barra de navegación */
         .glass-header {
             background-color: rgba(255, 255, 255, 0.85);
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
+        }
+
+        /* Animaciones personalizadas para elementos decorativos de fondo */
+        @keyframes float-slow {
+            0%, 100% { transform: translateY(0px) scale(1); }
+            50% { transform: translateY(-10px) scale(1.05); }
+        }
+
+        .animate-float {
+            animation: float-slow 6s ease-in-out infinite;
+        }
+
+        /* Suavizar la transición de cambios de tema o interacciones */
+        .transition-all-custom {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
     </style>
 </head>
@@ -58,11 +75,11 @@
     <!-- HEADER & NAVIGATION -->
     <header class="sticky top-0 z-50 glass-header border-b border-slate-200/80 transition-all duration-300" id="main-header">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-20">
-                <!-- Logo -->
+            <div class="flex items-center justify-between h-20 transition-all duration-300" id="header-inner">
+                <!-- Logo corporativo -->
                 <a href="#inicio" class="flex items-center space-x-3 group">
                     <div class="w-10 h-10 rounded-xl bg-brand-600 flex items-center justify-center text-white shadow-md shadow-brand-600/20 group-hover:bg-brand-700 transition-colors">
-                        <i class="fa-solid fa-briefcase text-lg"></i>
+                        <i class="fa-solid fa-user-tie text-lg"></i>
                     </div>
                     <div>
                         <span class="text-xl font-bold text-slate-900 tracking-tight block">Michell Pérez</span>
@@ -70,17 +87,17 @@
                     </div>
                 </a>
 
-                <!-- Desktop Navigation -->
+                <!-- Navegación para computadoras de escritorio -->
                 <nav class="hidden md:flex items-center space-x-1">
-                    <a href="#inicio" class="px-4 py-2 rounded-lg text-sm font-medium text-slate-700 hover:text-brand-600 hover:bg-slate-100/80 transition-all">Inicio</a>
-                    <a href="#sobre-mi" class="px-4 py-2 rounded-lg text-sm font-medium text-slate-700 hover:text-brand-600 hover:bg-slate-100/80 transition-all">Sobre Mí</a>
-                    <a href="#servicios" class="px-4 py-2 rounded-lg text-sm font-medium text-slate-700 hover:text-brand-600 hover:bg-slate-100/80 transition-all">Servicios</a>
-                    <a href="#cotizador" class="px-4 py-2 rounded-lg text-sm font-medium text-slate-700 hover:text-brand-600 hover:bg-slate-100/80 transition-all">Cotizador <span class="bg-brand-100 text-brand-700 text-[10px] font-bold px-1.5 py-0.5 rounded-full ml-1">Nuevo</span></a>
-                    <a href="#trayectoria" class="px-4 py-2 rounded-lg text-sm font-medium text-slate-700 hover:text-brand-600 hover:bg-slate-100/80 transition-all">Certificaciones</a>
-                    <a href="#contacto" class="ml-4 px-5 py-2.5 rounded-lg text-sm font-semibold text-white bg-brand-600 hover:bg-brand-700 hover:shadow-lg hover:shadow-brand-600/20 active:scale-[0.98] transition-all">Contacto</a>
+                    <a href="#inicio" class="px-4 py-2 rounded-lg text-sm font-medium text-slate-700 hover:text-brand-600 hover:bg-slate-100/80 transition-all-custom">Inicio</a>
+                    <a href="#sobre-mi" class="px-4 py-2 rounded-lg text-sm font-medium text-slate-700 hover:text-brand-600 hover:bg-slate-100/80 transition-all-custom">Sobre Mí</a>
+                    <a href="#servicios" class="px-4 py-2 rounded-lg text-sm font-medium text-slate-700 hover:text-brand-600 hover:bg-slate-100/80 transition-all-custom">Servicios</a>
+                    <a href="#cotizador" class="px-4 py-2 rounded-lg text-sm font-medium text-slate-700 hover:text-brand-600 hover:bg-slate-100/80 transition-all-custom">Cotizador <span class="bg-brand-100 text-brand-700 text-[10px] font-bold px-1.5 py-0.5 rounded-full ml-1">Nuevo</span></a>
+                    <a href="#trayectoria" class="px-4 py-2 rounded-lg text-sm font-medium text-slate-700 hover:text-brand-600 hover:bg-slate-100/80 transition-all-custom">Preparación</a>
+                    <a href="#contacto" class="ml-4 px-5 py-2.5 rounded-lg text-sm font-semibold text-white bg-brand-600 hover:bg-brand-700 hover:shadow-lg hover:shadow-brand-600/20 active:scale-[0.98] transition-all-custom">Contacto</a>
                 </nav>
 
-                <!-- Mobile menu button -->
+                <!-- Botón de menú en móviles -->
                 <div class="md:hidden flex items-center">
                     <button id="mobile-menu-btn" type="button" class="inline-flex items-center justify-center p-2 rounded-xl text-slate-600 hover:text-brand-600 hover:bg-slate-100 transition-colors focus:outline-none" aria-controls="mobile-menu" aria-expanded="false">
                         <span class="sr-only">Abrir menú</span>
@@ -91,14 +108,14 @@
             </div>
         </div>
 
-        <!-- Mobile Menu Panel -->
+        <!-- Panel de menú móvil -->
         <div class="hidden md:hidden border-t border-slate-200 bg-white" id="mobile-menu">
             <div class="px-4 pt-2 pb-6 space-y-1 sm:px-3">
                 <a href="#inicio" class="mobile-nav-link block px-4 py-3 rounded-xl text-base font-medium text-slate-700 hover:bg-brand-50 hover:text-brand-600 transition-colors">Inicio</a>
                 <a href="#sobre-mi" class="mobile-nav-link block px-4 py-3 rounded-xl text-base font-medium text-slate-700 hover:bg-brand-50 hover:text-brand-600 transition-colors">Sobre Mí</a>
                 <a href="#servicios" class="mobile-nav-link block px-4 py-3 rounded-xl text-base font-medium text-slate-700 hover:bg-brand-50 hover:text-brand-600 transition-colors">Servicios</a>
-                <a href="#cotizador" class="mobile-nav-link block px-4 py-3 rounded-xl text-base font-medium text-slate-700 hover:bg-brand-50 hover:text-brand-600 transition-colors">Cotizador de Presupuesto</a>
-                <a href="#trayectoria" class="mobile-nav-link block px-4 py-3 rounded-xl text-base font-medium text-slate-700 hover:bg-brand-50 hover:text-brand-600 transition-colors">Experiencia e Hitos</a>
+                <a href="#cotizador" class="mobile-nav-link block px-4 py-3 rounded-xl text-base font-medium text-slate-700 hover:bg-brand-50 hover:text-brand-600 transition-colors">Cotizador de Horas</a>
+                <a href="#trayectoria" class="mobile-nav-link block px-4 py-3 rounded-xl text-base font-medium text-slate-700 hover:bg-brand-50 hover:text-brand-600 transition-colors">Preparación y Hitos</a>
                 <div class="pt-4 border-t border-slate-100 px-4">
                     <a href="#contacto" class="mobile-nav-link block w-full text-center px-4 py-3 rounded-xl text-base font-semibold text-white bg-brand-600 hover:bg-brand-700 transition-colors">Solicitar Consulta Gratuita</a>
                 </div>
@@ -108,7 +125,7 @@
 
     <!-- HERO SECTION -->
     <section id="inicio" class="relative bg-gradient-to-br from-brand-950 via-slate-900 to-slate-950 text-white overflow-hidden py-20 lg:py-32">
-        <!-- Abstract Background Shapes -->
+        <!-- Elementos abstractos de fondo para estética prémium -->
         <div class="absolute inset-0 z-0 opacity-20 pointer-events-none">
             <div class="absolute top-1/4 left-1/4 w-96 h-96 rounded-full bg-brand-400 blur-[120px] animate-pulse"></div>
             <div class="absolute bottom-1/4 right-1/4 w-96 h-96 rounded-full bg-blue-500 blur-[120px] animate-pulse" style="animation-delay: 2s;"></div>
@@ -117,41 +134,41 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                 
-                <!-- Text Content -->
+                <!-- Columna de texto principal -->
                 <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
                     <div class="inline-flex items-center space-x-2 bg-brand-500/15 border border-brand-500/30 px-3.5 py-1.5 rounded-full text-brand-300 text-xs sm:text-sm font-semibold tracking-wide uppercase">
                         <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
-                        <span>Disponible para Nuevos Proyectos</span>
+                        <span>Disponible para Apoyo Virtual</span>
                     </div>
                     
                     <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.1] text-white">
                         Optimiza tu tiempo. <br>
                         <span class="bg-gradient-to-r from-brand-300 via-brand-400 to-blue-200 bg-clip-text text-transparent">
-                            Yo me encargo de la gestión.
+                            Yo me encargo del orden.
                         </span>
                     </h1>
                     
-                    <p class="text-lg text-slate-300 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-light">
-                        Asistente administrativa profesional, capacitada con rigurosidad en herramientas ofimáticas de vanguardia y flujos de gestión documental. Especializada en estructurar información, organizar carpetas en la nube y optimizar agendas para PyMEs y profesionales independientes.
+                    <p class="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-light">
+                        Hola, soy <strong>Michell Camila Pérez Ortiz</strong>. Me especializo en dar soporte organizativo, estructurar flujos documentales en la nube y optimizar el uso de hojas de cálculo para profesionales independientes y pequeños comercios. Ofrezco compromiso, proactividad y dominio técnico impecable.
                     </p>
 
-                    <!-- Trust Elements & Badges -->
-                    <div class="pt-2 flex flex-wrap justify-center lg:justify-start gap-4 text-xs text-slate-400">
+                    <!-- Tarjetas de confianza rápidas -->
+                    <div class="pt-2 flex flex-wrap justify-center lg:justify-start gap-3 text-xs text-slate-400">
                         <div class="flex items-center space-x-1.5 bg-slate-800/60 px-3 py-1.5 rounded-lg border border-slate-700/50">
                             <i class="fa-solid fa-shield-halved text-brand-400"></i>
                             <span>100% Confidencialidad</span>
                         </div>
                         <div class="flex items-center space-x-1.5 bg-slate-800/60 px-3 py-1.5 rounded-lg border border-slate-700/50">
                             <i class="fa-solid fa-clock text-brand-400"></i>
-                            <span>Eficiencia Garantizada</span>
+                            <span>Respuestas Ágiles</span>
                         </div>
                         <div class="flex items-center space-x-1.5 bg-slate-800/60 px-3 py-1.5 rounded-lg border border-slate-700/50">
-                            <i class="fa-solid fa-user-check text-brand-400"></i>
-                            <span>Compromiso y Proactividad</span>
+                            <i class="fa-solid fa-desktop text-brand-400"></i>
+                            <span>Soporte Virtual Remoto</span>
                         </div>
                     </div>
 
-                    <!-- Call To Actions -->
+                    <!-- Botones de Acción -->
                     <div class="pt-4 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
                         <a href="#contacto" class="w-full sm:w-auto px-8 py-4 rounded-xl text-base font-semibold text-white bg-brand-500 hover:bg-brand-600 shadow-lg shadow-brand-500/35 hover:shadow-brand-600/50 transition-all text-center transform hover:-translate-y-0.5">
                             Conversar Ahora
@@ -162,42 +179,39 @@
                     </div>
                 </div>
 
-                <!-- Graphic/Image Container -->
+                <!-- Ilustración visual de oficina digital de Michell -->
                 <div class="lg:col-span-5 flex justify-center lg:justify-end">
-                    <div class="relative w-72 h-72 sm:w-96 sm:h-96">
-                        <!-- Background Decorative circles -->
+                    <div class="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96">
                         <div class="absolute inset-0 bg-gradient-to-tr from-brand-600 to-blue-500 rounded-full opacity-10 animate-pulse"></div>
                         <div class="absolute -inset-4 border border-dashed border-slate-700 rounded-full opacity-30 animate-spin" style="animation-duration: 40s;"></div>
                         
-                        <!-- Floating Badges -->
-                        <div class="absolute top-10 -left-6 bg-slate-900 border border-slate-700 p-3 rounded-xl shadow-xl flex items-center space-x-3 z-20 animate-bounce" style="animation-duration: 5s;">
-                            <div class="w-10 h-10 rounded-lg bg-green-500/20 flex items-center justify-center text-green-400">
-                                <i class="fa-solid fa-chart-line"></i>
+                        <!-- Insignia flotante 1 -->
+                        <div class="absolute top-6 -left-8 bg-slate-900 border border-slate-700 p-3 rounded-xl shadow-xl flex items-center space-x-3 z-20 animate-bounce" style="animation-duration: 5s;">
+                            <div class="w-9 h-9 rounded-lg bg-green-500/20 flex items-center justify-center text-green-400 flex-shrink-0">
+                                <i class="fa-solid fa-circle-check"></i>
                             </div>
                             <div>
-                                <p class="text-[11px] text-slate-400 uppercase tracking-wider font-bold">Productividad</p>
-                                <p class="text-sm font-bold text-white">Organización Ágil</p>
+                                <p class="text-[9px] text-slate-400 uppercase tracking-wider font-bold">Herramientas</p>
+                                <p class="text-xs font-bold text-white">Office & Google Suite</p>
                             </div>
                         </div>
 
-                        <div class="absolute bottom-10 -right-6 bg-slate-900 border border-slate-700 p-3 rounded-xl shadow-xl flex items-center space-x-3 z-20 animate-bounce" style="animation-duration: 6s; animation-delay: 1s;">
-                            <div class="w-10 h-10 rounded-lg bg-yellow-500/20 flex items-center justify-center text-yellow-400">
-                                <i class="fa-regular fa-star"></i>
+                        <!-- Insignia flotante 2 -->
+                        <div class="absolute bottom-6 -right-8 bg-slate-900 border border-slate-700 p-3 rounded-xl shadow-xl flex items-center space-x-3 z-20 animate-float" style="animation-delay: 1s;">
+                            <div class="w-9 h-9 rounded-lg bg-yellow-500/20 flex items-center justify-center text-yellow-400 flex-shrink-0">
+                                <i class="fa-solid fa-award"></i>
                             </div>
                             <div>
-                                <p class="text-[11px] text-slate-400 uppercase tracking-wider font-bold">Microsoft & Google</p>
-                                <p class="text-sm font-bold text-white">Domino Avanzado</p>
+                                <p class="text-[9px] text-slate-400 uppercase tracking-wider font-bold">Competencia</p>
+                                <p class="text-xs font-bold text-white">Preparación Técnica</p>
                             </div>
                         </div>
 
-                        <!-- Professional Avatar/Icon representation -->
+                        <!-- Avatar Profesional con Iniciales de Michell Camila Pérez Ortiz -->
                         <div class="absolute inset-0 rounded-full border-4 border-slate-800 overflow-hidden bg-gradient-to-b from-brand-800 to-slate-900 flex flex-col items-center justify-center shadow-2xl">
-                            <!-- Inner SVG vector for professional illustration -->
-                            <svg class="w-3/4 h-3/4 text-brand-100" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" d="M18.685 19.097A9.723 9.723 0 0021.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12c0 2.7.1 5.315 3.066 7.097A9.716 9.716 0 0012 21.75a9.716 9.716 0 006.685-2.653zm-12.54-1.285A7.486 7.486 0 0112 15a7.486 7.486 0 015.855 2.812A8.224 8.224 0 0112 20.25a8.224 8.224 0 01-5.855-3.438zM15.75 9a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" clip-rule="evenodd" />
-                            </svg>
-                            <!-- Elegant overlay text -->
-                            <div class="absolute bottom-6 bg-brand-600 text-white px-4 py-1 rounded-full text-xs font-semibold uppercase tracking-wider shadow">
+                            <!-- Iniciales Elegantes -->
+                            <span class="text-6xl sm:text-7xl font-extrabold tracking-wider text-white bg-gradient-to-r from-brand-100 to-blue-300 bg-clip-text text-transparent">MPO</span>
+                            <div class="absolute bottom-6 bg-brand-600 text-white px-4 py-1.5 rounded-full text-[11px] font-bold uppercase tracking-widest shadow">
                                 Michell Pérez
                             </div>
                         </div>
@@ -208,77 +222,38 @@
         </div>
     </section>
 
-    <!-- ABOUT ME & PHILOSOPHY -->
+    <!-- ABOUT ME SECTION -->
     <section id="sobre-mi" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center">
                 
-                <!-- Left Column: Biography with Stats -->
-                <div class="lg:col-span-5 relative">
-                    <div class="space-y-6">
-                        <div class="w-12 h-1 bg-brand-600 rounded"></div>
-                        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 leading-tight">
-                            Soluciones de confianza para delegar con tranquilidad
-                        </h2>
-                        <p class="text-slate-600 leading-relaxed font-light">
-                            Mi misión es liberar a profesionales, emprendedores y pequeños comercios de la carga administrativa del día a día. Con una sólida capacitación técnica y un enfoque riguroso en la precisión, me comprometo a ser el soporte ideal que mantiene tu negocio funcionando con orden.
-                        </p>
-                        <p class="text-slate-600 leading-relaxed font-light">
-                            Sé que cada cliente y negocio tiene prioridades diferentes; por ello, mi método de trabajo se basa en la comunicación transparente, la disposición de aprender rápidamente tus procesos específicos y el uso ágil de herramientas en la nube.
-                        </p>
-                    </div>
+                <!-- Columna Izquierda: Introducción y Filosofía de Michell -->
+                <div class="lg:col-span-5 relative space-y-6">
+                    <div class="w-12 h-1 bg-brand-600 rounded"></div>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 leading-tight">
+                        Soluciones administrativas de confianza para delegar con tranquilidad
+                    </h2>
+                    <p class="text-slate-600 leading-relaxed font-light">
+                        Mi meta principal es facilitar el flujo diario de profesionales y emprendedores, liberándolos de la carga operativa y organizativa que consume su tiempo valioso.
+                    </p>
+                    <p class="text-slate-600 leading-relaxed font-light">
+                        Me he capacitado minuciosamente en entornos ofimáticos modernos y control digital de archivos. Al no tener la rigidez de viejos vicios laborales, me adapto con total entusiasmo, rapidez y flexibilidad a los procesos individuales de tu negocio.
+                    </p>
 
-                    <!-- Micro statistics grid -->
-                    <div class="grid grid-cols-2 gap-4 mt-8 pt-8 border-t border-slate-100">
+                    <!-- Estadísticas de Calificación -->
+                    <div class="grid grid-cols-2 gap-4 pt-4 border-t border-slate-100">
                         <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
                             <span class="text-3xl font-extrabold text-brand-600 block">100%</span>
-                            <span class="text-xs font-semibold text-slate-500 uppercase tracking-wider block mt-1">Compromiso y Entrega</span>
+                            <span class="text-xs font-semibold text-slate-500 uppercase tracking-wider block mt-1">Disposición de Apoyo</span>
                         </div>
                         <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
                             <span class="text-3xl font-extrabold text-brand-600 block">Alta</span>
-                            <span class="text-xs font-semibold text-slate-500 uppercase tracking-wider block mt-1">Competencia Técnica</span>
+                            <span class="text-xs font-semibold text-slate-500 uppercase tracking-wider block mt-1">Capacidad de Aprendizaje</span>
                         </div>
                     </div>
                 </div>
 
-            </div>
-        </div>
-    </section>
-
-    <!-- ABOUT ME & PHILOSOPHY -->
-    <section id="sobre-mi" class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center">
-                
-                <!-- Left Column: Biography with Stats -->
-                <div class="lg:col-span-5 relative">
-                    <div class="space-y-6">
-                        <div class="w-12 h-1 bg-brand-600 rounded"></div>
-                        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 leading-tight">
-                            Soluciones de confianza para delegar con tranquilidad
-                        </h2>
-                        <p class="text-slate-600 leading-relaxed font-light">
-                            Mi misión es liberar a profesionales, PYMEs y directivos de la carga administrativa del día a día. Con una sólida trayectoria y un enfoque meticuloso en los detalles, me convierto en el motor invisible que mantiene tu organización funcionando a la perfección.
-                        </p>
-                        <p class="text-slate-600 leading-relaxed font-light">
-                            Sé que cada cliente y negocio es único; por eso, mi método de trabajo se basa en la comunicación transparente, la anticipación de necesidades y el uso eficiente de la tecnología moderna.
-                        </p>
-                    </div>
-
-                    <!-- Micro statistics grid -->
-                    <div class="grid grid-cols-2 gap-4 mt-8 pt-8 border-t border-slate-100">
-                        <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
-                            <span class="text-3xl font-extrabold text-brand-600 block">7+</span>
-                            <span class="text-xs font-semibold text-slate-500 uppercase tracking-wider block mt-1">Años de Trayectoria</span>
-                        </div>
-                        <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
-                            <span class="text-3xl font-extrabold text-brand-600 block">150+</span>
-                            <span class="text-xs font-semibold text-slate-500 uppercase tracking-wider block mt-1">Proyectos Exitosos</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Right Column: Values / Pillars -->
+                <!-- Columna Derecha: Pilares Metodológicos de Trabajo -->
                 <div class="lg:col-span-7 space-y-8">
                     <div class="bg-brand-50 rounded-3xl p-6 sm:p-10 border border-brand-100">
                         <h3 class="text-xl font-bold text-slate-900 mb-6 flex items-center space-x-2">
@@ -287,40 +262,40 @@
                         </h3>
 
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                            <!-- Pillar 1 -->
-                            <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-all">
+                            <!-- Pilar 1 -->
+                            <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-all-custom">
                                 <div class="w-10 h-10 rounded-xl bg-brand-100 text-brand-600 flex items-center justify-center mb-4">
                                     <i class="fa-solid fa-bolt text-lg"></i>
                                 </div>
                                 <h4 class="text-base font-bold text-slate-900 mb-1">Competencia Técnica</h4>
-                                <p class="text-xs sm:text-sm text-slate-600">Dominio de Office, Google Suite, ERPs y automatizaciones para flujos de trabajo eficientes.</p>
+                                <p class="text-xs sm:text-sm text-slate-600">Dominio preciso de hojas de cálculo, gestión de nubes y plantillas estandarizadas.</p>
                             </div>
 
-                            <!-- Pillar 2 -->
-                            <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-all">
+                            <!-- Pilar 2 -->
+                            <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-all-custom">
                                 <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center mb-4">
                                     <i class="fa-solid fa-lock text-lg"></i>
                                 </div>
-                                <h4 class="text-base font-bold text-slate-900 mb-1">Confidencialidad Rigurosa</h4>
-                                <p class="text-xs sm:text-sm text-slate-600">Gestión segura de datos, correspondencia delicada e información empresarial con total discreción.</p>
+                                <h4 class="text-base font-bold text-slate-900 mb-1">Confidencialidad Absoluta</h4>
+                                <p class="text-xs sm:text-sm text-slate-600">Manejo sumamente cauteloso de bases de datos, datos de clientes y correspondencia corporativa.</p>
                             </div>
 
-                            <!-- Pillar 3 -->
-                            <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-all">
+                            <!-- Pilar 3 -->
+                            <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-all-custom">
                                 <div class="w-10 h-10 rounded-xl bg-violet-100 text-violet-600 flex items-center justify-center mb-4">
                                     <i class="fa-solid fa-sliders text-lg"></i>
                                 </div>
-                                <h4 class="text-base font-bold text-slate-900 mb-1">Organización Adaptable</h4>
-                                <p class="text-xs sm:text-sm text-slate-600">Sistemas de archivos estructurados e intuitivos adaptados a las preferencias de tu equipo.</p>
+                                <h4 class="text-base font-bold text-slate-900 mb-1">Estructura Ordenada</h4>
+                                <p class="text-xs sm:text-sm text-slate-600">Diseño de directorios claros en la nube para que ningún archivo importante vuelva a perderse.</p>
                             </div>
 
-                            <!-- Pillar 4 -->
-                            <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-all">
+                            <!-- Pilar 4 -->
+                            <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-all-custom">
                                 <div class="w-10 h-10 rounded-xl bg-amber-100 text-amber-600 flex items-center justify-center mb-4">
                                     <i class="fa-regular fa-comment-dots text-lg"></i>
                                 </div>
-                                <h4 class="text-base font-bold text-slate-900 mb-1">Comunicación Proactiva</h4>
-                                <p class="text-xs sm:text-sm text-slate-600">Respuestas rápidas, reportes de avances sistemáticos y resolución independiente de imprevistos.</p>
+                                <h4 class="text-base font-bold text-slate-900 mb-1">Atención Detallada</h4>
+                                <p class="text-xs sm:text-sm text-slate-600">Atención enfocada y rigurosa para realizar cada labor administrativa sin errores.</p>
                             </div>
                         </div>
                     </div>
@@ -336,34 +311,34 @@
             
             <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
                 <span class="text-sm font-bold text-brand-600 uppercase tracking-wider bg-brand-100/60 px-3.5 py-1.5 rounded-full">Servicios Ofrecidos</span>
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">¿Cómo puedo ayudarte a crecer hoy?</h2>
-                <p class="text-slate-600 font-light">Optimiza tus tareas operativas delegando en servicios estructurados con altos estándares de calidad.</p>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">¿Cómo puedo ayudarte en tu día a día?</h2>
+                <p class="text-slate-600 font-light text-sm sm:text-base">Optimiza tus actividades operativas delegando en servicios diseñados bajo rigurosos estándares metodológicos.</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 
-                <!-- Service 1: Gestión Documental -->
+                <!-- Servicio 1: Gestión Documental -->
                 <div class="bg-white rounded-2xl border border-slate-200/60 shadow-sm hover:shadow-xl hover:border-brand-200 transition-all duration-300 p-8 flex flex-col justify-between group">
                     <div>
                         <div class="w-14 h-14 rounded-2xl bg-brand-50 text-brand-600 flex items-center justify-center mb-6 group-hover:bg-brand-600 group-hover:text-white transition-colors">
                             <i class="fa-solid fa-folder-tree text-2xl"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-slate-900 mb-3">Gestión Documental Avanzada</h3>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3">Gestión Documental</h3>
                         <p class="text-sm text-slate-600 leading-relaxed mb-6">
-                            Clasificación, archivo digital y organización exhaustiva de tus carpetas compartidas. Creación de plantillas, facturación y mantenimiento de base de datos de manera impecable.
+                            Clasificación, estructuración lógica y depuración de carpetas compartidas en servicios de la nube. Aseguramiento de accesos correctos y estandarización del archivo corporativo.
                         </p>
                         <ul class="space-y-2.5 text-xs text-slate-500 mb-8">
                             <li class="flex items-center space-x-2">
                                 <i class="fa-solid fa-circle-check text-brand-500"></i>
-                                <span>Organización de nubes (Drive, OneDrive)</span>
+                                <span>Organización de nubes (Drive, OneDrive, Dropbox)</span>
                             </li>
                             <li class="flex items-center space-x-2">
                                 <i class="fa-solid fa-circle-check text-brand-500"></i>
-                                <span>Edición y formateo de informes</span>
+                                <span>Clasificación estricta de facturas y recibos</span>
                             </li>
                             <li class="flex items-center space-x-2">
                                 <i class="fa-solid fa-circle-check text-brand-500"></i>
-                                <span>Control y archivo de facturación</span>
+                                <span>Estandarización de nombres de archivos</span>
                             </li>
                         </ul>
                     </div>
@@ -372,28 +347,28 @@
                     </button>
                 </div>
 
-                <!-- Service 2: Herramientas Ofimáticas -->
+                <!-- Servicio 2: Herramientas Ofimáticas -->
                 <div class="bg-white rounded-2xl border border-slate-200/60 shadow-sm hover:shadow-xl hover:border-brand-200 transition-all duration-300 p-8 flex flex-col justify-between group">
                     <div>
                         <div class="w-14 h-14 rounded-2xl bg-violet-50 text-violet-600 flex items-center justify-center mb-6 group-hover:bg-violet-600 group-hover:text-white transition-colors">
-                            <i class="fa-solid fa-laptop-code text-2xl"></i>
+                            <i class="fa-solid fa-table-list text-2xl"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-slate-900 mb-3">Herramientas Ofimáticas</h3>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3">Ofimática Avanzada</h3>
                         <p class="text-sm text-slate-600 leading-relaxed mb-6">
-                            Creación de hojas de cálculo avanzadas para análisis de datos, automatización de plantillas de correspondencia y diseño de presentaciones profesionales de alto impacto para reuniones.
+                            Elaboración de hojas de cálculo estructuradas para control financiero, bases de datos optimizadas, y estructuración de informes corporativos visualmente profesionales.
                         </p>
                         <ul class="space-y-2.5 text-xs text-slate-500 mb-8">
                             <li class="flex items-center space-x-2">
                                 <i class="fa-solid fa-circle-check text-violet-500"></i>
-                                <span>Excel & Google Sheets avanzado (Fórmulas, tablas)</span>
+                                <span>Excel & Google Sheets avanzado (fórmulas y tablas)</span>
                             </li>
                             <li class="flex items-center space-x-2">
                                 <i class="fa-solid fa-circle-check text-violet-500"></i>
-                                <span>Presentaciones corporativas dinámicas</span>
+                                <span>Formularios digitales de captura de datos</span>
                             </li>
                             <li class="flex items-center space-x-2">
                                 <i class="fa-solid fa-circle-check text-violet-500"></i>
-                                <span>Macros básicas e integraciones en la nube</span>
+                                <span>Documentos de texto y reportes corporativos</span>
                             </li>
                         </ul>
                     </div>
@@ -402,7 +377,7 @@
                     </button>
                 </div>
 
-                <!-- Service 3: Organización Administrativa -->
+                <!-- Servicio 3: Organización Administrativa -->
                 <div class="bg-white rounded-2xl border border-slate-200/60 shadow-sm hover:shadow-xl hover:border-brand-200 transition-all duration-300 p-8 flex flex-col justify-between group">
                     <div>
                         <div class="w-14 h-14 rounded-2xl bg-emerald-50 text-emerald-600 flex items-center justify-center mb-6 group-hover:bg-emerald-600 group-hover:text-white transition-colors">
@@ -410,20 +385,20 @@
                         </div>
                         <h3 class="text-xl font-bold text-slate-900 mb-3">Organización & Agenda</h3>
                         <p class="text-sm text-slate-600 leading-relaxed mb-6">
-                            Coordinación precisa de agendas complejas, filtros de correo electrónico críticos, programación de reuniones y logística integral de viajes o eventos para directivos.
+                            Gestión y estructuración de calendarios de actividades, recordatorios oportunos de reuniones, control básico de bandeja de entrada para filtrado de mensajes prioritarios.
                         </p>
                         <ul class="space-y-2.5 text-xs text-slate-500 mb-8">
                             <li class="flex items-center space-x-2">
                                 <i class="fa-solid fa-circle-check text-emerald-500"></i>
-                                <span>Gestión de buzones de entrada "Zero Inbox"</span>
+                                <span>Programación de compromisos y recordatorios</span>
                             </li>
                             <li class="flex items-center space-x-2">
                                 <i class="fa-solid fa-circle-check text-emerald-500"></i>
-                                <span>Calendario y recordatorios automatizados</span>
+                                <span>Filtrado básico y organización del buzón de correo</span>
                             </li>
                             <li class="flex items-center space-x-2">
                                 <i class="fa-solid fa-circle-check text-emerald-500"></i>
-                                <span>Coordinación logística nacional/internacional</span>
+                                <span>Elaboración de agendas y minutas de reuniones</span>
                             </li>
                         </ul>
                     </div>
@@ -447,84 +422,84 @@
 
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-0 relative z-10">
                     
-                    <!-- Calculator info -->
+                    <!-- Información descriptiva del cotizador -->
                     <div class="p-8 sm:p-12 lg:col-span-5 flex flex-col justify-between text-white">
                         <div class="space-y-4">
                             <span class="text-brand-400 text-xs font-bold uppercase tracking-wider bg-brand-500/15 border border-brand-500/30 px-3.5 py-1.5 rounded-full inline-block">Herramienta Interactiva</span>
                             <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight">Estima tu Presupuesto a Medida</h2>
                             <p class="text-slate-300 text-sm leading-relaxed font-light">
-                                ¿No estás seguro de cuántas horas de soporte necesitas para tus proyectos administrativos? Selecciona las áreas y desliza el control para estimar el costo mensual aproximado.
+                                ¿No estás seguro de cuántas horas de soporte virtual requiere tu flujo de trabajo diario? Selecciona las actividades administrativas necesarias y ajusta el deslizador para conocer un estimado de inversión mensual idóneo.
                             </p>
                         </div>
                         
                         <div class="mt-8 pt-8 border-t border-slate-800 space-y-4 text-xs sm:text-sm text-slate-400">
                             <div class="flex items-center space-x-3">
                                 <i class="fa-solid fa-calendar text-brand-400"></i>
-                                <span>Suscripción flexible mensual (Cancela o cambia de plan)</span>
+                                <span>Esquema mensual flexible de horas</span>
                             </div>
                             <div class="flex items-center space-x-3">
-                                <i class="fa-solid fa-receipt text-brand-400"></i>
-                                <span>Entrega de factura oficial</span>
+                                <i class="fa-solid fa-lock text-brand-400"></i>
+                                <span>Acuerdo formal de confidencialidad incluido</span>
                             </div>
                             <div class="flex items-center space-x-3">
                                 <i class="fa-solid fa-comments text-brand-400"></i>
-                                <span>Canal de comunicación directo en tiempo real</span>
+                                <span>Contacto fluido vía WhatsApp o Correo</span>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Interactive control elements -->
-                    <div class="bg-slate-850/60 backdrop-blur p-8 sm:p-12 lg:col-span-7 border-t lg:border-t-0 lg:border-l border-slate-800">
+                    <!-- Controles interactivos del formulario del cotizador -->
+                    <div class="bg-slate-900/50 backdrop-blur p-8 sm:p-12 lg:col-span-7 border-t lg:border-t-0 lg:border-l border-slate-800">
                         <form id="calc-form" class="space-y-6 text-white" onsubmit="event.preventDefault();">
                             
-                            <!-- Step 1: Services Checkboxes -->
+                            <!-- Checkboxes de servicios seleccionables -->
                             <div class="space-y-3">
-                                <label class="text-sm font-semibold text-slate-200 block">1. Selecciona los servicios que requieres:</label>
+                                <label class="text-xs sm:text-sm font-semibold text-slate-200 block">1. Selecciona las áreas administrativas que necesitas:</label>
                                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                                    <label class="flex items-center space-x-3 p-3 rounded-xl bg-slate-900/50 border border-slate-800 hover:border-slate-700 cursor-pointer transition-all select-none">
+                                    <label class="flex items-center space-x-3 p-3 rounded-xl bg-slate-950/60 border border-slate-800 hover:border-slate-700 cursor-pointer transition-all-custom select-none">
                                         <input type="checkbox" id="srv-doc" checked onchange="calculateQuote()" class="w-4 h-4 rounded text-brand-600 focus:ring-brand-500 bg-slate-800 border-slate-700">
                                         <span class="text-xs sm:text-sm text-slate-300">Gestión Documental</span>
                                     </label>
-                                    <label class="flex items-center space-x-3 p-3 rounded-xl bg-slate-900/50 border border-slate-800 hover:border-slate-700 cursor-pointer transition-all select-none">
+                                    <label class="flex items-center space-x-3 p-3 rounded-xl bg-slate-950/60 border border-slate-800 hover:border-slate-700 cursor-pointer transition-all-custom select-none">
                                         <input type="checkbox" id="srv-ofi" checked onchange="calculateQuote()" class="w-4 h-4 rounded text-brand-600 focus:ring-brand-500 bg-slate-800 border-slate-700">
                                         <span class="text-xs sm:text-sm text-slate-300">Ofimática Avanzada</span>
                                     </label>
-                                    <label class="flex items-center space-x-3 p-3 rounded-xl bg-slate-900/50 border border-slate-800 hover:border-slate-700 cursor-pointer transition-all select-none">
+                                    <label class="flex items-center space-x-3 p-3 rounded-xl bg-slate-950/60 border border-slate-800 hover:border-slate-700 cursor-pointer transition-all-custom select-none">
                                         <input type="checkbox" id="srv-org" checked onchange="calculateQuote()" class="w-4 h-4 rounded text-brand-600 focus:ring-brand-500 bg-slate-800 border-slate-700">
-                                        <span class="text-xs sm:text-sm text-slate-300">Agenda y Correo</span>
+                                        <span class="text-xs sm:text-sm text-slate-300">Agenda & Calendario</span>
                                     </label>
-                                    <label class="flex items-center space-x-3 p-3 rounded-xl bg-slate-900/50 border border-slate-800 hover:border-slate-700 cursor-pointer transition-all select-none">
+                                    <label class="flex items-center space-x-3 p-3 rounded-xl bg-slate-950/60 border border-slate-800 hover:border-slate-700 cursor-pointer transition-all-custom select-none">
                                         <input type="checkbox" id="srv-fact" onchange="calculateQuote()" class="w-4 h-4 rounded text-brand-600 focus:ring-brand-500 bg-slate-800 border-slate-700">
-                                        <span class="text-xs sm:text-sm text-slate-300">Facturación Básica</span>
+                                        <span class="text-xs sm:text-sm text-slate-300">Clasificación de Recibos</span>
                                     </label>
                                 </div>
                             </div>
 
-                            <!-- Step 2: Slider Range for hours per week -->
+                            <!-- Deslizador interactivo de horas sugeridas -->
                             <div class="space-y-3 pt-2">
                                 <div class="flex justify-between items-center">
-                                    <label for="hours-slider" class="text-sm font-semibold text-slate-200">2. Horas mensuales sugeridas:</label>
+                                    <label for="hours-slider" class="text-xs sm:text-sm font-semibold text-slate-200">2. Horas mensuales proyectadas:</label>
                                     <span class="bg-brand-600 text-white font-bold text-xs px-2.5 py-1 rounded-full"><span id="hours-display">20</span> horas</span>
                                 </div>
                                 <input type="range" id="hours-slider" min="5" max="80" value="20" step="5" oninput="calculateQuote()" class="w-full h-2 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-brand-500">
-                                <div class="flex justify-between text-[11px] text-slate-500">
-                                    <span>Soporte Básico (5 hrs)</span>
-                                    <span>Part-time (40 hrs)</span>
-                                    <span>Full-time Dedicado (80 hrs)</span>
+                                <div class="flex justify-between text-[10px] sm:text-[11px] text-slate-500">
+                                    <span>Apoyo Básico (5 hrs)</span>
+                                    <span>Medio Tiempo (40 hrs)</span>
+                                    <span>Dedicación Completa (80 hrs)</span>
                                 </div>
                             </div>
 
-                            <!-- Calculations output area -->
-                            <div class="mt-8 p-6 bg-slate-900/80 rounded-2xl border border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-6">
+                            <!-- Caja de salida de cálculos mensuales -->
+                            <div class="mt-8 p-6 bg-slate-950/80 rounded-2xl border border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-6">
                                 <div class="text-center sm:text-left">
-                                    <p class="text-[11px] text-slate-400 uppercase tracking-wider font-bold">Inversión Mensual Estimada</p>
+                                    <p class="text-[10px] sm:text-[11px] text-slate-400 uppercase tracking-wider font-bold">Inversión Mensual Estimada</p>
                                     <div class="flex items-baseline justify-center sm:justify-start space-x-1.5 mt-1">
-                                        <span class="text-3xl sm:text-4xl font-extrabold text-white" id="total-quote-price">$300</span>
+                                        <span class="text-3xl sm:text-4xl font-extrabold text-white" id="total-quote-price">$160</span>
                                         <span class="text-xs text-slate-400">USD/mes</span>
                                     </div>
-                                    <p class="text-[10px] text-brand-400 mt-1" id="rate-description">Tarifa preferencial incluida por paquete de horas</p>
+                                    <p class="text-[10px] text-brand-400 mt-1" id="rate-description">Tarifa preferencial con descuento integrado por volumen.</p>
                                 </div>
-                                <button type="button" onclick="applyQuote()" class="w-full sm:w-auto px-6 py-3 rounded-xl bg-brand-500 hover:bg-brand-600 text-white text-xs sm:text-sm font-bold shadow-md shadow-brand-500/20 hover:shadow-brand-600/30 transition-all flex items-center justify-center space-x-2">
+                                <button type="button" onclick="applyQuote()" class="w-full sm:w-auto px-6 py-3 rounded-xl bg-brand-500 hover:bg-brand-600 text-white text-xs sm:text-sm font-bold shadow-md shadow-brand-500/20 hover:shadow-brand-600/30 transition-all-custom flex items-center justify-center space-x-2">
                                     <span>Contratar estas horas</span>
                                     <i class="fa-solid fa-arrow-right"></i>
                                 </button>
@@ -538,61 +513,61 @@
         </div>
     </section>
 
-    <!-- EXPERIENCE & CERTIFICATIONS SECTION -->
+    <!-- TRAINING & TIMELINE SECTION -->
     <section id="trayectoria" class="py-20 bg-slate-50 border-t border-b border-slate-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
                 
-                <!-- Left: Professional Timeline -->
+                <!-- Columna Izquierda: Cronograma de Preparación Práctica -->
                 <div class="lg:col-span-6 space-y-10">
                     <div>
-                        <span class="text-sm font-bold text-brand-600 uppercase tracking-wider block mb-2">Mi Preparación</span>
-                        <h2 class="text-3xl font-extrabold text-slate-900">Formación y Enfoque Práctico</h2>
-                        <p class="text-slate-600 font-light mt-2">Me he preparado con rigurosidad metodológica y simulaciones reales para ofrecer resultados desde el primer día.</p>
+                        <span class="text-sm font-bold text-brand-600 uppercase tracking-wider block mb-2">Mi Formación</span>
+                        <h2 class="text-3xl font-extrabold text-slate-900">Preparación y Enfoque Práctico</h2>
+                        <p class="text-slate-600 font-light mt-2 text-sm sm:text-base">Me he preparado con rigor metodológico e intensas simulaciones reales de apoyo ejecutivo para proveer valor óptimo a mis clientes desde el primer día.</p>
                     </div>
 
-                    <!-- Timeline element list -->
+                    <!-- Lista del Cronograma Práctico -->
                     <div class="space-y-8 relative before:absolute before:inset-y-0 before:left-3.5 before:w-0.5 before:bg-slate-200">
                         
-                        <!-- Timeline Item 1 -->
+                        <!-- Evento 1 -->
                         <div class="relative pl-10 group">
                             <div class="absolute left-1.5 top-1.5 w-4.5 h-4.5 rounded-full bg-brand-600 border-4 border-white group-hover:scale-125 transition-transform"></div>
-                            <span class="text-xs font-bold text-brand-600 bg-brand-100 px-2 py-0.5 rounded-full">Actualidad</span>
-                            <h3 class="text-lg font-bold text-slate-900 mt-1">Asistente Administrativa Virtual</h3>
-                            <p class="text-xs text-slate-500 font-medium">Búsqueda activa de proyectos e iniciativas de apoyo administrativo.</p>
-                            <p class="text-sm text-slate-600 mt-2 font-light">Enfocada en proveer soporte virtual y remoto con altos valores de confidencialidad, puntualidad y comunicación asertiva.</p>
+                            <span class="text-xs font-bold text-brand-600 bg-brand-100 px-2.5 py-0.5 rounded-full">Actualidad</span>
+                            <h3 class="text-lg font-bold text-slate-900 mt-1">Soporte y Gestión Administrativa Virtual</h3>
+                            <p class="text-xs text-slate-500 font-medium">Búsqueda de proyectos independientes de apoyo administrativo y orden digital.</p>
+                            <p class="text-sm text-slate-600 mt-2 font-light">Enfocada en proveer soluciones prácticas y remotas basadas en valores de confidencialidad, puntualidad y comunicación proactiva.</p>
                         </div>
 
-                        <!-- Timeline Item 2 -->
+                        <!-- Evento 2 -->
                         <div class="relative pl-10 group">
                             <div class="absolute left-1.5 top-1.5 w-4.5 h-4.5 rounded-full bg-slate-400 border-4 border-white group-hover:scale-125 transition-transform group-hover:bg-brand-600"></div>
-                            <span class="text-xs font-bold text-slate-500 bg-slate-200/60 px-2 py-0.5 rounded-full">Proyecto Técnico</span>
-                            <h3 class="text-lg font-bold text-slate-900 mt-1">Simulación Integral de Control de Oficina</h3>
-                            <p class="text-xs text-slate-500 font-medium">Casos prácticos de archivonomía digital y flujos corporativos.</p>
-                            <p class="text-sm text-slate-600 mt-2 font-light">Diseño estructural de carpetas lógicas compartidas para evitar pérdida de información y estandarización en bases de datos virtuales.</p>
+                            <span class="text-xs font-bold text-slate-500 bg-slate-200/60 px-2.5 py-0.5 rounded-full">Prácticas Técnicas</span>
+                            <h3 class="text-lg font-bold text-slate-900 mt-1">Simulación Completa de Control de Oficina</h3>
+                            <p class="text-xs text-slate-500 font-medium">Casos de archivonomía digital y flujos documentales.</p>
+                            <p class="text-sm text-slate-600 mt-2 font-light">Estructuración técnica de directorios virtuales inteligentes para evitar la pérdida de información y agilizar el control de facturas.</p>
                         </div>
 
-                        <!-- Timeline Item 3 -->
+                        <!-- Evento 3 -->
                         <div class="relative pl-10 group">
                             <div class="absolute left-1.5 top-1.5 w-4.5 h-4.5 rounded-full bg-slate-400 border-4 border-white group-hover:scale-125 transition-transform group-hover:bg-brand-600"></div>
-                            <span class="text-xs font-bold text-slate-500 bg-slate-200/60 px-2 py-0.5 rounded-full">Especialización de Ofimática</span>
-                            <h3 class="text-lg font-bold text-slate-900 mt-1">Preparación Intensiva en Herramientas de Cálculo</h3>
-                            <p class="text-xs text-slate-500 font-medium">Fórmulas, tablas dinámicas y análisis documental.</p>
-                            <p class="text-sm text-slate-600 mt-2 font-light">Dominio de plantillas automatizadas en Excel y Google Sheets destinadas a agilizar tareas financieras o de inventario.</p>
+                            <span class="text-xs font-bold text-slate-500 bg-slate-200/60 px-2.5 py-0.5 rounded-full">Capacitación</span>
+                            <h3 class="text-lg font-bold text-slate-900 mt-1">Capacitación en Hojas de Cálculo e Informes</h3>
+                            <p class="text-xs text-slate-500 font-medium">Dominio de fórmulas, tablas analíticas y organización de datos.</p>
+                            <p class="text-sm text-slate-600 mt-2 font-light">Construcción y diseño de plantillas automatizadas orientadas a agilizar tareas del día a día e informes gerenciales.</p>
                         </div>
 
                     </div>
                 </div>
 
-                <!-- Right: Certifications & Tech Stack -->
+                <!-- Columna Derecha: Certificaciones con Filtros Interactivos -->
                 <div class="lg:col-span-6 space-y-10">
                     <div>
-                        <span class="text-sm font-bold text-violet-600 uppercase tracking-wider block mb-2">Educación y Competencias</span>
-                        <h2 class="text-3xl font-extrabold text-slate-900">Certificaciones Oficiales</h2>
-                        <p class="text-slate-600 font-light mt-2">La preparación continua es la clave para entregar un servicio con precisión técnica.</p>
+                        <span class="text-sm font-bold text-violet-600 uppercase tracking-wider block mb-2">Conocimientos Avalados</span>
+                        <h2 class="text-3xl font-extrabold text-slate-900">Mis Certificaciones</h2>
+                        <p class="text-slate-600 font-light mt-2 text-sm sm:text-base">La actualización constante de competencias técnicas es clave para asegurar la máxima calidad en los encargos.</p>
                     </div>
 
-                    <!-- Tech Stack Filter tabs -->
+                    <!-- Pestañas de Filtrado de Certificados -->
                     <div class="space-y-6">
                         <div class="flex flex-wrap gap-2 border-b border-slate-200 pb-2">
                             <button onclick="filterCertifications('all')" id="tab-cert-all" class="px-4 py-2 text-xs sm:text-sm font-semibold rounded-lg bg-brand-600 text-white transition-all">Todas</button>
@@ -600,54 +575,54 @@
                             <button onclick="filterCertifications('admin')" id="tab-cert-admin" class="px-4 py-2 text-xs sm:text-sm font-medium rounded-lg text-slate-600 hover:bg-slate-200/60 transition-all">Gestión / Admin</button>
                         </div>
 
-                        <!-- Certification Cards Box -->
+                        <!-- Grid de Tarjetas de Certificación -->
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4" id="certifications-grid">
                             
-                            <!-- Cert 1 -->
+                            <!-- Certificado 1 -->
                             <div class="cert-card bg-white p-5 rounded-xl border border-slate-200/80 shadow-sm flex items-start space-x-3 transition-all duration-300 hover:shadow" data-category="office">
                                 <div class="w-9 h-9 rounded bg-brand-100 text-brand-600 flex items-center justify-center flex-shrink-0">
                                     <i class="fa-solid fa-award"></i>
                                 </div>
                                 <div>
                                     <h4 class="text-sm font-bold text-slate-900">Especialista en Excel Avanzado</h4>
-                                    <p class="text-xs text-slate-500 mt-0.5">Microsoft Training</p>
-                                    <span class="text-[10px] bg-brand-50 text-brand-700 px-1.5 py-0.5 rounded font-bold mt-2 inline-block">ID: MS-EX230</span>
+                                    <p class="text-xs text-slate-500 mt-0.5">Preparación Técnica Ofimática</p>
+                                    <span class="text-[10px] bg-brand-50 text-brand-700 px-1.5 py-0.5 rounded font-bold mt-2 inline-block">Fórmulas & Tablas</span>
                                 </div>
                             </div>
 
-                            <!-- Cert 2 -->
+                            <!-- Certificado 2 -->
                             <div class="cert-card bg-white p-5 rounded-xl border border-slate-200/80 shadow-sm flex items-start space-x-3 transition-all duration-300 hover:shadow" data-category="office">
                                 <div class="w-9 h-9 rounded bg-blue-100 text-blue-600 flex items-center justify-center flex-shrink-0">
                                     <i class="fa-solid fa-cloud"></i>
                                 </div>
                                 <div>
-                                    <h4 class="text-sm font-bold text-slate-900">Google Workspace Certified</h4>
-                                    <p class="text-xs text-slate-500 mt-0.5">Google Cloud Academy</p>
-                                    <span class="text-[10px] bg-blue-50 text-blue-700 px-1.5 py-0.5 rounded font-bold mt-2 inline-block">Colaboración Eficiente</span>
+                                    <h4 class="text-sm font-bold text-slate-900">Google Workspace Specialist</h4>
+                                    <p class="text-xs text-slate-500 mt-0.5">Entornos en la Nube</p>
+                                    <span class="text-[10px] bg-blue-50 text-blue-700 px-1.5 py-0.5 rounded font-bold mt-2 inline-block">Colaboración Digital</span>
                                 </div>
                             </div>
 
-                            <!-- Cert 3 -->
+                            <!-- Certificado 3 -->
                             <div class="cert-card bg-white p-5 rounded-xl border border-slate-200/80 shadow-sm flex items-start space-x-3 transition-all duration-300 hover:shadow" data-category="admin">
                                 <div class="w-9 h-9 rounded bg-violet-100 text-violet-600 flex items-center justify-center flex-shrink-0">
                                     <i class="fa-solid fa-graduation-cap"></i>
                                 </div>
                                 <div>
-                                    <h4 class="text-sm font-bold text-slate-900">Gestión Documental Digital</h4>
-                                    <p class="text-xs text-slate-500 mt-0.5">Institución Tecnológica Nacional</p>
-                                    <span class="text-[10px] bg-violet-50 text-violet-700 px-1.5 py-0.5 rounded font-bold mt-2 inline-block">Archivonomía Moderna</span>
+                                    <h4 class="text-sm font-bold text-slate-900">Gestión de Archivo Digital</h4>
+                                    <p class="text-xs text-slate-500 mt-0.5">Estructuración & Nomenclatura</p>
+                                    <span class="text-[10px] bg-violet-50 text-violet-700 px-1.5 py-0.5 rounded font-bold mt-2 inline-block">Orden Administrativo</span>
                                 </div>
                             </div>
 
-                            <!-- Cert 4 -->
+                            <!-- Certificado 4 -->
                             <div class="cert-card bg-white p-5 rounded-xl border border-slate-200/80 shadow-sm flex items-start space-x-3 transition-all duration-300 hover:shadow" data-category="admin">
                                 <div class="w-9 h-9 rounded bg-emerald-100 text-emerald-600 flex items-center justify-center flex-shrink-0">
                                     <i class="fa-regular fa-handshake"></i>
                                 </div>
                                 <div>
-                                    <h4 class="text-sm font-bold text-slate-900">Asistencia Virtual Profesional</h4>
-                                    <p class="text-xs text-slate-500 mt-0.5">Asociación de Trabajo Remoto</p>
-                                    <span class="text-[10px] bg-emerald-50 text-emerald-700 px-1.5 py-0.5 rounded font-bold mt-2 inline-block">Ética & Productividad</span>
+                                    <h4 class="text-sm font-bold text-slate-900">Asistencia Virtual Moderna</h4>
+                                    <p class="text-xs text-slate-500 mt-0.5">Metodología de Soporte</p>
+                                    <span class="text-[10px] bg-emerald-50 text-emerald-700 px-1.5 py-0.5 rounded font-bold mt-2 inline-block">Ética & Proactividad</span>
                                 </div>
                             </div>
 
@@ -664,18 +639,18 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
                 
-                <!-- Testimonials Slider (Left) -->
+                <!-- Carrusel de Testimonios (Columna Izquierda) -->
                 <div class="lg:col-span-5 flex flex-col justify-between space-y-8">
                     <div>
                         <span class="text-sm font-bold text-brand-600 uppercase tracking-wider block mb-2">Valoraciones</span>
-                        <h2 class="text-3xl font-extrabold text-slate-900 leading-tight">Opiniones de Colaboradores</h2>
-                        <p class="text-slate-600 font-light mt-2">La dedicación y proactividad que garantizan un trabajo impecable.</p>
+                        <h2 class="text-3xl font-extrabold text-slate-900 leading-tight">Opiniones sobre mi desempeño</h2>
+                        <p class="text-slate-600 font-light mt-2 text-sm">Reseñas de mentores académicos y colaboradores de proyectos simulados sobre mi responsabilidad y meticulosidad.</p>
                     </div>
 
-                    <!-- Testimonial Slider Frame -->
+                    <!-- Contenedor del Testimonio Activo -->
                     <div class="bg-slate-50 rounded-2xl p-6 sm:p-8 border border-slate-100 relative min-h-[220px]">
                         
-                        <!-- Testimonial 1 -->
+                        <!-- Testimonio 1 -->
                         <div id="testimonial-slide-1" class="testimonial-slide space-y-4">
                             <div class="flex items-center space-x-1 text-amber-500 text-sm">
                                 <i class="fa-solid fa-star"></i>
@@ -684,21 +659,21 @@
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
                             </div>
-                            <p class="text-sm sm:text-base text-slate-600 italic leading-relaxed">
-                                "Michell posee una increíble capacidad de concentración y rigor en sus trabajos. Organizó eficientemente toda la estructura de archivos que le encomendamos durante su proyecto de capacitación técnica."
+                            <p class="text-xs sm:text-sm text-slate-600 italic leading-relaxed">
+                                "Michell posee una increíble capacidad de concentración y rigor en sus tareas. Organizó eficientemente toda la estructura lógica de carpetas digitales durante sus prácticas de simulación administrativa."
                             </p>
                             <div class="flex items-center space-x-3 pt-4 border-t border-slate-200/60">
-                                <div class="w-10 h-10 rounded-full bg-slate-200 flex items-center justify-center text-slate-500 font-bold text-xs uppercase">
+                                <div class="w-10 h-10 rounded-full bg-slate-200 flex items-center justify-center text-slate-500 font-bold text-xs">
                                     AM
                                 </div>
                                 <div>
-                                    <h4 class="text-sm font-bold text-slate-900">Alejandra Mendoza</h4>
-                                    <p class="text-xs text-slate-500">Mentora de Proyecto Administrativo</p>
+                                    <h4 class="text-xs sm:text-sm font-bold text-slate-900">Alejandra Mendoza</h4>
+                                    <p class="text-[10px] sm:text-xs text-slate-500">Mentora de Proyecto Administrativo</p>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Testimonial 2 (hidden initially) -->
+                        <!-- Testimonial 2 (oculto por defecto) -->
                         <div id="testimonial-slide-2" class="testimonial-slide space-y-4 hidden">
                             <div class="flex items-center space-x-1 text-amber-500 text-sm">
                                 <i class="fa-solid fa-star"></i>
@@ -707,23 +682,23 @@
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
                             </div>
-                            <p class="text-sm sm:text-base text-slate-600 italic leading-relaxed">
-                                "Su dominio de Microsoft Office y Google Workspace es notable. Cumple con los plazos pactados a cabalidad y muestra siempre una actitud sumamente servicial y dispuesta."
+                            <p class="text-xs sm:text-sm text-slate-600 italic leading-relaxed">
+                                "Su dominio práctico de hojas de cálculo y Google Workspace es de primer nivel. Es puntual con las entregas de datos pactadas y demuestra siempre una actitud proactiva de servicio."
                             </p>
                             <div class="flex items-center space-x-3 pt-4 border-t border-slate-200/60">
-                                <div class="w-10 h-10 rounded-full bg-slate-200 flex items-center justify-center text-slate-500 font-bold text-xs uppercase">
+                                <div class="w-10 h-10 rounded-full bg-slate-200 flex items-center justify-center text-slate-500 font-bold text-xs">
                                     CH
                                 </div>
                                 <div>
-                                    <h4 class="text-sm font-bold text-slate-900">Carlos Herrera</h4>
-                                    <p class="text-xs text-slate-500">Colaborador en Prácticas de Ofimática</p>
+                                    <h4 class="text-xs sm:text-sm font-bold text-slate-900">Carlos Herrera</h4>
+                                    <p class="text-[10px] sm:text-xs text-slate-500">Colaborador de Casos de Ofimática</p>
                                 </div>
                             </div>
                         </div>
 
                     </div>
 
-                    <!-- Slide controls -->
+                    <!-- Controles de dirección del carrusel -->
                     <div class="flex items-center space-x-3">
                         <button onclick="changeTestimonial(-1)" class="w-10 h-10 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-700 flex items-center justify-center transition-colors">
                             <i class="fa-solid fa-chevron-left text-sm"></i>
@@ -734,7 +709,7 @@
                     </div>
                 </div>
 
-                <!-- FAQ Accordion (Right) -->
+                <!-- Acordeón de Preguntas Frecuentes (Columna Derecha) -->
                 <div class="lg:col-span-7 space-y-6">
                     <div>
                         <span class="text-sm font-bold text-violet-600 uppercase tracking-wider block mb-2">Respuestas Rápidas</span>
@@ -743,36 +718,36 @@
 
                     <div class="space-y-4">
                         
-                        <!-- Accordion Item 1 -->
+                        <!-- Pregunta 1 -->
                         <div class="border border-slate-200 rounded-xl overflow-hidden bg-slate-50/50">
-                            <button onclick="toggleFaq(1)" class="w-full text-left p-5 font-bold text-sm sm:text-base text-slate-900 flex items-center justify-between hover:bg-slate-100/50 transition-colors">
-                                <span>¿Cómo es el proceso para comenzar a trabajar juntos?</span>
+                            <button onclick="toggleFaq(1)" class="w-full text-left p-5 font-bold text-xs sm:text-sm text-slate-900 flex items-center justify-between hover:bg-slate-100/50 transition-colors">
+                                <span>¿Cuál es el proceso para comenzar a delegar mis tareas en ti?</span>
                                 <i class="fa-solid fa-chevron-down text-xs text-slate-500 transition-transform duration-300" id="faq-chevron-1"></i>
                             </button>
-                            <div class="hidden p-5 pt-0 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 bg-white" id="faq-answer-1">
-                                Agendamos una breve llamada gratuita de 15 minutos para entender tus requerimientos. Definimos un plan mensual, firmamos un acuerdo de confidencialidad y ¡comenzamos la misma semana!
+                            <div class="hidden p-5 pt-0 text-xs text-slate-600 leading-relaxed border-t border-slate-100 bg-white" id="faq-answer-1">
+                                Coordinamos una breve charla virtual gratuita de 15 minutos para comprender tus requerimientos específicos de soporte. Luego, fijamos un cronograma de entregas o una bolsa de horas mensuales y ¡comenzamos la misma semana!
                             </div>
                         </div>
 
-                        <!-- Accordion Item 2 -->
+                        <!-- Pregunta 2 -->
                         <div class="border border-slate-200 rounded-xl overflow-hidden bg-slate-50/50">
-                            <button onclick="toggleFaq(2)" class="w-full text-left p-5 font-bold text-sm sm:text-base text-slate-900 flex items-center justify-between hover:bg-slate-100/50 transition-colors">
-                                <span>¿Cómo aseguras la confidencialidad de mis documentos?</span>
+                            <button onclick="toggleFaq(2)" class="w-full text-left p-5 font-bold text-xs sm:text-sm text-slate-900 flex items-center justify-between hover:bg-slate-100/50 transition-colors">
+                                <span>¿Cómo se garantiza la confidencialidad de mis archivos y datos?</span>
                                 <i class="fa-solid fa-chevron-down text-xs text-slate-500 transition-transform duration-300" id="faq-chevron-2"></i>
                             </button>
-                            <div class="hidden p-5 pt-0 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 bg-white" id="faq-answer-2">
-                                Se firma un contrato NDA de confidencialidad desde el primer día. Además, utilizo gestores de contraseñas seguros para cualquier credencial y sigo rigurosas prácticas de ciberseguridad.
+                            <div class="hidden p-5 pt-0 text-xs text-slate-600 leading-relaxed border-t border-slate-100 bg-white" id="faq-answer-2">
+                                Podemos suscribir un acuerdo formal de confidencialidad (NDA) antes del traspaso de accesos. Utilizo prácticas seguras de resguardo de información y plataformas autorizadas para la colaboración digital.
                             </div>
                         </div>
 
-                        <!-- Accordion Item 3 -->
+                        <!-- Pregunta 3 -->
                         <div class="border border-slate-200 rounded-xl overflow-hidden bg-slate-50/50">
-                            <button onclick="toggleFaq(3)" class="w-full text-left p-5 font-bold text-sm sm:text-base text-slate-900 flex items-center justify-between hover:bg-slate-100/50 transition-colors">
-                                <span>¿Qué pasa si mis necesidades de horas varían de un mes a otro?</span>
+                            <button onclick="toggleFaq(3)" class="w-full text-left p-5 font-bold text-xs sm:text-sm text-slate-900 flex items-center justify-between hover:bg-slate-100/50 transition-colors">
+                                <span>¿Qué pasa si mis necesidades de horas de soporte varían mes con mes?</span>
                                 <i class="fa-solid fa-chevron-down text-xs text-slate-500 transition-transform duration-300" id="faq-chevron-3"></i>
                             </button>
-                            <div class="hidden p-5 pt-0 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 bg-white" id="faq-answer-3">
-                                Los planes son sumamente flexibles. Al finalizar el mes, evaluamos el volumen de trabajo y podemos escalar o disminuir la cantidad de horas para el siguiente período de facturación sin penalizaciones.
+                            <div class="hidden p-5 pt-0 text-xs text-slate-600 leading-relaxed border-t border-slate-100 bg-white" id="faq-answer-3">
+                                Mis servicios son sumamente flexibles. Al término de cada mes, evaluamos el volumen de tareas realizadas y podemos escalar, disminuir o pausar los paquetes de asistencia para el período inmediato sin ningún inconveniente.
                             </div>
                         </div>
 
@@ -788,100 +763,104 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-stretch">
                 
-                <!-- Contact info card (Left) -->
+                <!-- Tarjeta de información de contacto (Izquierda) -->
                 <div class="lg:col-span-5 flex flex-col justify-between space-y-10 bg-slate-950 p-8 sm:p-10 rounded-3xl border border-slate-800">
                     <div class="space-y-6">
                         <span class="text-xs font-bold text-brand-400 bg-brand-500/15 border border-brand-500/30 px-3.5 py-1.5 rounded-full inline-block uppercase tracking-wider">¿Listo para delegar?</span>
-                        <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight">Hablemos de tus proyectos</h2>
+                        <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight">Hablemos hoy mismo</h2>
                         <p class="text-slate-400 text-sm leading-relaxed font-light">
-                            Completa el formulario para solicitar una llamada de diagnóstico sin costo. Me pondré en contacto contigo en un plazo máximo de 24 horas hábiles.
+                            Completa el formulario para solicitar una llamada de diagnóstico gratuita y analizar juntos cómo puedo agilizar el orden y las tareas de tu oficina.
                         </p>
                     </div>
 
-                    <!-- Contact Details list -->
+                    <!-- Lista de detalles de contacto oficiales -->
                     <div class="space-y-4 pt-4 border-t border-slate-800">
                         <div class="flex items-center space-x-4">
-                            <div class="w-10 h-10 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center text-brand-400">
+                            <div class="w-10 h-10 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center text-brand-400 flex-shrink-0">
                                 <i class="fa-regular fa-envelope"></i>
                             </div>
                             <div>
                                 <p class="text-[10px] text-slate-500 uppercase tracking-wider font-bold">Correo Electrónico</p>
-                                <a href="mailto:perez.ortizmichell03@gmail.com" class="text-sm font-semibold hover:text-brand-400 transition-colors">perez.ortizmichell03@gmail.com</a>
+                                <a href="mailto:perez.ortizmichell03@gmail.com" class="text-xs sm:text-sm font-semibold hover:text-brand-400 transition-colors break-all">perez.ortizmichell03@gmail.com</a>
                             </div>
                         </div>
 
                         <div class="flex items-center space-x-4">
-                            <div class="w-10 h-10 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center text-brand-400">
+                            <div class="w-10 h-10 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center text-brand-400 flex-shrink-0">
                                 <i class="fa-solid fa-location-dot"></i>
                             </div>
                             <div>
-                                <p class="text-[10px] text-slate-500 uppercase tracking-wider font-bold">Ubicación y Cobertura</p>
-                                <span class="text-sm font-semibold text-slate-300">Santa Marta (Magdalena), Colombia — Soporte Global Remoto</span>
+                                <p class="text-[10px] text-slate-500 uppercase tracking-wider font-bold">Ubicación & Cobertura</p>
+                                <span class="text-xs sm:text-sm font-semibold text-slate-300">Santa Marta (Magdalena), Colombia — Cobertura Remota Global</span>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Social Icons -->
+                    <!-- Enlaces directos complementarios -->
                     <div class="flex items-center space-x-4 pt-4">
-                        <a href="#" class="w-10 h-10 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-white hover:bg-brand-600 transition-colors" title="LinkedIn">
-                            <i class="fa-brands fa-linkedin-in text-sm"></i>
+                        <a href="mailto:perez.ortizmichell03@gmail.com" class="w-10 h-10 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-white hover:bg-brand-600 transition-colors" title="Escríbeme un Correo Directo">
+                            <i class="fa-solid fa-envelope text-sm"></i>
+                        </a>
+                        <a href="#contacto" class="w-10 h-10 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-white hover:bg-brand-600 transition-colors" title="Santa Marta, Colombia">
+                            <i class="fa-solid fa-map-pin text-sm"></i>
                         </a>
                     </div>
                 </div>
 
-                <!-- Form Card (Right) -->
+                <!-- Formulario de contacto inteligente (Derecha) -->
                 <div class="lg:col-span-7 bg-slate-850 p-8 sm:p-10 rounded-3xl border border-slate-800 flex flex-col justify-between">
                     <form id="contact-form" class="space-y-5" onsubmit="handleFormSubmit(event)">
                         
-                        <!-- Name & Company Grid -->
+                        <!-- Fila 1: Nombre y Proyecto -->
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                             <div class="space-y-1.5">
                                 <label for="form-name" class="text-xs font-semibold text-slate-300">Nombre Completo <span class="text-brand-400">*</span></label>
-                                <input type="text" id="form-name" required class="w-full px-4 py-3 bg-slate-900 border border-slate-800 rounded-xl text-sm text-white focus:outline-none focus:border-brand-500 transition-all placeholder:text-slate-600" placeholder="Ej. Juan Pérez">
+                                <input type="text" id="form-name" required class="w-full px-4 py-3 bg-slate-900 border border-slate-800 rounded-xl text-xs sm:text-sm text-white focus:outline-none focus:border-brand-500 transition-all placeholder:text-slate-600" placeholder="Ej. Juan Pérez">
                             </div>
                             <div class="space-y-1.5">
-                                <label for="form-company" class="text-xs font-semibold text-slate-300">Empresa / Proyecto</label>
-                                <input type="text" id="form-company" class="w-full px-4 py-3 bg-slate-900 border border-slate-800 rounded-xl text-sm text-white focus:outline-none focus:border-brand-500 transition-all placeholder:text-slate-600" placeholder="Ej. Startup S.A.">
+                                <label for="form-company" class="text-xs font-semibold text-slate-300">Empresa / Emprendimiento</label>
+                                <input type="text" id="form-company" class="w-full px-4 py-3 bg-slate-900 border border-slate-800 rounded-xl text-xs sm:text-sm text-white focus:outline-none focus:border-brand-500 transition-all placeholder:text-slate-600" placeholder="Ej. Freelance / Comercio">
                             </div>
                         </div>
 
-                        <!-- Email & Phone Grid -->
+                        <!-- Fila 2: Email y Servicio de Interés -->
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                             <div class="space-y-1.5">
-                                <label for="form-email" class="text-xs font-semibold text-slate-300">Correo Electrónico <span class="text-brand-400">*</span></label>
-                                <input type="email" id="form-email" required class="w-full px-4 py-3 bg-slate-900 border border-slate-800 rounded-xl text-sm text-white focus:outline-none focus:border-brand-500 transition-all placeholder:text-slate-600" placeholder="Ej. juan@correo.com">
+                                <label for="form-email" class="text-xs font-semibold text-slate-300">Correo de Contacto <span class="text-brand-400">*</span></label>
+                                <input type="email" id="form-email" required class="w-full px-4 py-3 bg-slate-900 border border-slate-800 rounded-xl text-xs sm:text-sm text-white focus:outline-none focus:border-brand-500 transition-all placeholder:text-slate-600" placeholder="Ej. juan@correo.com">
                             </div>
                             <div class="space-y-1.5">
                                 <label for="form-service" class="text-xs font-semibold text-slate-300">Servicio de Interés</label>
-                                <select id="form-service" class="w-full px-4 py-3 bg-slate-900 border border-slate-800 rounded-xl text-sm text-slate-400 focus:outline-none focus:border-brand-500 transition-all">
+                                <select id="form-service" class="w-full px-4 py-3 bg-slate-900 border border-slate-800 rounded-xl text-xs sm:text-sm text-slate-400 focus:outline-none focus:border-brand-500 transition-all">
                                     <option value="gestion">Gestión Documental</option>
                                     <option value="ofimatica">Herramientas Ofimáticas</option>
                                     <option value="agenda">Organización & Agenda</option>
-                                    <option value="custom">Otro Requerimiento / Horas</option>
+                                    <option value="custom">Soporte por Horas / Personalizado</option>
                                 </select>
                             </div>
                         </div>
 
-                        <!-- Custom Hours Note (populated from the rate calculator if applied) -->
-                        <div id="calculator-badge-alert" class="hidden flex items-center justify-between p-3.5 bg-brand-500/10 border border-brand-500/30 rounded-xl text-brand-300 text-xs font-medium">
+                        <!-- Notificación de datos precargados del cotizador interactivo -->
+                        <div id="calculator-badge-alert" class="hidden flex items-center justify-between p-3.5 bg-brand-500/10 border border-brand-500/30 rounded-xl text-brand-300 text-[11px] font-medium">
                             <div class="flex items-center space-x-2">
                                 <i class="fa-solid fa-calculator"></i>
-                                <span>Cargado presupuesto estimado del cotizador: <strong id="alert-calc-hours">0</strong> horas estimadas.</span>
+                                <span>Presupuesto cargado: <strong id="alert-calc-hours">0</strong> horas de soporte mensual sugeridas.</span>
                             </div>
                             <button type="button" onclick="clearCalculatorAlert()" class="text-slate-400 hover:text-white transition-colors">
                                 <i class="fa-solid fa-xmark"></i>
                             </button>
                         </div>
 
-                        <!-- Message -->
+                        <!-- Mensaje -->
                         <div class="space-y-1.5">
-                            <label for="form-message" class="text-xs font-semibold text-slate-300">Mensaje o Requerimientos Adicionales</label>
-                            <textarea id="form-message" rows="4" class="w-full px-4 py-3 bg-slate-900 border border-slate-800 rounded-xl text-sm text-white focus:outline-none focus:border-brand-500 transition-all placeholder:text-slate-600" placeholder="Escribe aquí los detalles de tu consulta..."></textarea>
+                            <label for="form-message" class="text-xs font-semibold text-slate-300">Mensaje o Detalles del Apoyo Administrativo</label>
+                            <textarea id="form-message" rows="4" class="w-full px-4 py-3 bg-slate-900 border border-slate-800 rounded-xl text-xs sm:text-sm text-white focus:outline-none focus:border-brand-500 transition-all placeholder:text-slate-600" placeholder="Coméntame brevemente qué tipo de soporte administrativo o de organización digital necesitas..."></textarea>
                         </div>
 
-                        <button type="submit" class="w-full py-4 rounded-xl bg-brand-500 hover:bg-brand-600 text-white font-bold transition-all shadow-lg shadow-brand-500/15 hover:shadow-brand-600/30 flex items-center justify-center space-x-2">
+                        <!-- Botón para Enviar el Formulario -->
+                        <button type="submit" class="w-full py-4 rounded-xl bg-brand-500 hover:bg-brand-600 text-white font-bold text-xs sm:text-sm transition-all shadow-lg shadow-brand-500/15 hover:shadow-brand-600/30 flex items-center justify-center space-x-2">
                             <span>Enviar Solicitud</span>
-                            <i class="fa-regular fa-paper-plane text-sm"></i>
+                            <i class="fa-regular fa-paper-plane text-xs"></i>
                         </button>
                     </form>
                 </div>
@@ -894,23 +873,23 @@
     <footer class="bg-slate-950 border-t border-slate-900 text-slate-500 py-12 text-sm">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col md:flex-row items-center justify-between gap-6">
-                <!-- Branding -->
+                <!-- Logotipo e Identidad de Marca -->
                 <div class="flex items-center space-x-3">
                     <div class="w-8 h-8 rounded-lg bg-brand-600 flex items-center justify-center text-white font-bold text-xs">
-                        <i class="fa-solid fa-briefcase"></i>
+                        <i class="fa-solid fa-user-tie"></i>
                     </div>
                     <div>
-                        <span class="text-base font-bold text-white block">Michell Camila Pérez Ortiz</span>
-                        <span class="text-[10px] font-medium tracking-wide text-slate-400 block -mt-1 uppercase">Soporte Administrativo Profesional</span>
+                        <span class="text-sm font-bold text-white block">Michell Camila Pérez Ortiz</span>
+                        <span class="text-[9px] font-medium tracking-wide text-slate-400 block -mt-1 uppercase">Asistencia Administrativa & Soporte de Oficina</span>
                     </div>
                 </div>
 
-                <!-- Copyright -->
+                <!-- Derechos Reservados -->
                 <p class="text-center md:text-left text-xs text-slate-500">
-                    &copy; 2026 Michell Camila Pérez Ortiz. Todos los derechos reservados.
+                    &copy; 2026 Michell Camila Pérez Ortiz. Santa Marta, Colombia.
                 </p>
 
-                <!-- Navigation Links -->
+                <!-- Enlaces Rápidos de Navegación del Pie de Página -->
                 <div class="flex items-center space-x-6 text-xs font-semibold">
                     <a href="#inicio" class="hover:text-white transition-colors">Inicio</a>
                     <a href="#sobre-mi" class="hover:text-white transition-colors">Sobre Mí</a>
@@ -921,15 +900,16 @@
         </div>
     </footer>
 
-    <!-- SERVICE DETAIL MODAL (MODAL) -->
+    <!-- SERVICE DETAIL MODAL (VENTANA DE DETALLE) -->
     <div id="service-modal" class="fixed inset-0 z-50 overflow-y-auto hidden" aria-labelledby="modal-title" role="dialog" aria-modal="true">
         <div class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
-            <!-- Modal overlay -->
-            <div class="fixed inset-0 bg-slate-900/80 transition-opacity" aria-hidden="true" onclick="closeServiceModal()"></div>
+            <!-- Capa translúcida del modal -->
+            <div class="fixed inset-0 bg-slate-900/85 transition-opacity" aria-hidden="true" onclick="closeServiceModal()"></div>
 
+            <!-- Ajuste del espacio central -->
             <span class="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span>
 
-            <!-- Modal Content box -->
+            <!-- Cuerpo del modal -->
             <div class="inline-block align-bottom bg-white rounded-3xl text-left overflow-hidden shadow-2xl transform transition-all sm:my-8 sm:align-middle sm:max-w-xl sm:w-full">
                 <div class="bg-white px-6 pt-6 pb-4 sm:p-8 sm:pb-4">
                     <div class="sm:flex sm:items-start">
@@ -937,23 +917,24 @@
                             <i class="fa-solid fa-circle-info text-lg" id="modal-icon"></i>
                         </div>
                         <div class="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
-                            <h3 class="text-xl leading-6 font-bold text-slate-900" id="modal-title">
+                            <h3 class="text-lg leading-6 font-bold text-slate-900" id="modal-title">
                                 Detalles de Servicio
                             </h3>
-                            <div class="mt-4">
-                                <p class="text-sm text-slate-500 leading-relaxed" id="modal-description">
-                                    Información extendida.
+                            <div class="mt-3">
+                                <p class="text-xs sm:text-sm text-slate-500 leading-relaxed" id="modal-description">
+                                    Información extendida sobre el alcance de la solución administrativa seleccionada.
                                 </p>
                             </div>
                             <div class="mt-4" id="modal-bullets-area">
-                                <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Alcance del servicio:</h4>
+                                <h4 class="text-[10px] sm:text-[11px] font-bold text-slate-400 uppercase tracking-wider mb-2">Alcance práctico incluido:</h4>
                                 <ul class="space-y-2 text-xs text-slate-600" id="modal-bullets">
-                                    <!-- Populated dynamically -->
+                                    <!-- Elementos inyectados de forma dinámica por JavaScript -->
                                 </ul>
                             </div>
                         </div>
                     </div>
                 </div>
+                <!-- Botonera de pie del modal -->
                 <div class="bg-slate-50 px-6 py-4 sm:px-8 sm:flex sm:flex-row-reverse">
                     <a href="#contacto" onclick="closeServiceModal()" class="w-full inline-flex justify-center rounded-xl border border-transparent shadow-sm px-4 py-2 bg-brand-600 text-sm font-semibold text-white hover:bg-brand-700 focus:outline-none sm:ml-3 sm:w-auto">
                         Me interesa este servicio
@@ -972,20 +953,20 @@
             <i class="fa-solid fa-check"></i>
         </div>
         <div>
-            <h4 class="text-xs sm:text-sm font-bold text-white">¡Mensaje Enviado Exitosamente!</h4>
-            <p class="text-[11px] text-slate-400">Michell se pondrá en contacto pronto.</p>
+            <h4 class="text-xs sm:text-sm font-bold text-white">¡Mensaje enviado exitosamente!</h4>
+            <p class="text-[10px] sm:text-[11px] text-slate-400">Michell se pondrá en contacto pronto.</p>
         </div>
     </div>
 
     <!-- INTERACTIVE JAVASCRIPT CODE -->
     <script>
-        // DOM Elements
+        // Elementos principales de la interfaz
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
         const menuIconBars = document.getElementById('menu-icon-bars');
         const menuIconClose = document.getElementById('menu-icon-close');
         
-        // Mobile Menu Toggling
+        // Control de Apertura y Cierre de Menú Móvil
         mobileMenuBtn.addEventListener('click', () => {
             const isExpanded = mobileMenuBtn.getAttribute('aria-expanded') === 'true';
             mobileMenuBtn.setAttribute('aria-expanded', !isExpanded);
@@ -994,7 +975,7 @@
             menuIconClose.classList.toggle('hidden');
         });
 
-        // Close mobile menu when clicking any nav link
+        // Cierre automático al pulsar un enlace en el menú móvil
         document.querySelectorAll('.mobile-nav-link').forEach(link => {
             link.addEventListener('click', () => {
                 mobileMenu.classList.add('hidden');
@@ -1004,58 +985,62 @@
             });
         });
 
-        // Sticky Header shrink effect on scroll
+        // Transición de altura e iluminación del Header según posición del scroll
         const header = document.getElementById('main-header');
+        const headerInner = document.getElementById('header-inner');
         window.addEventListener('scroll', () => {
             if (window.scrollY > 20) {
-                header.classList.remove('h-20');
-                header.classList.add('h-16', 'shadow-md', 'shadow-slate-100/50');
+                headerInner.classList.remove('h-20');
+                headerInner.classList.add('h-16');
+                header.classList.add('shadow-md', 'shadow-slate-100/50');
             } else {
-                header.classList.remove('h-16', 'shadow-md', 'shadow-slate-100/50');
-                header.classList.add('h-20');
+                headerInner.classList.remove('h-16');
+                headerInner.classList.add('h-20');
+                header.classList.remove('shadow-md', 'shadow-slate-100/50');
             }
         });
 
-        // SERVICES MODAL DATA
+        // Base de Datos Estática de Detalles del Catálogo de Servicios
         const servicesData = {
             'gestion-documental': {
-                title: 'Gestión Documental Avanzada',
+                title: 'Gestión Documental',
                 icon: 'fa-folder-tree',
                 iconColorClass: 'text-brand-600 bg-brand-100',
-                description: 'Organizo exhaustivamente tus archivos compartidos de trabajo en la nube para asegurar que nunca más pierdas un documento clave o un contrato. Además, establezco nomenclatura estándar y protocolos de acceso para tu equipo.',
+                description: 'Organizo meticulosamente tu información digital y estructuro directorios compartidos lógicos que se adapten a tu día a día, eliminando el desorden y evitando la pérdida de archivos importantes.',
                 bullets: [
-                    'Migración integral de sistemas locales a la nube (Google Drive, OneDrive, Dropbox).',
-                    'Control y registro sistemático de facturación enviada y recibida.',
-                    'Edición avanzada y estructuración de informes mensuales, actas de asamblea y minutas.',
-                    'Control de versiones de contratos comerciales e información delicada.'
+                    'Migración ordenada de archivos locales a la nube (Google Drive, OneDrive).',
+                    'Estandarización sistemática de nombres de archivos para búsquedas ágiles.',
+                    'Clasificación cuidadosa de recibos de egresos, ingresos y archivos fiscales.',
+                    'Control administrativo de carpetas compartidas con niveles específicos de acceso.'
                 ]
             },
             'ofimatica': {
-                title: 'Herramientas Ofimáticas Profesionales',
-                icon: 'fa-laptop-code',
+                title: 'Ofimática Avanzada',
+                icon: 'fa-table-list',
                 iconColorClass: 'text-violet-600 bg-violet-100',
-                description: 'Maximizo la potencia de tus herramientas de oficina favoritas para ahorrar tiempo. Creo automatizaciones sencillas pero poderosas que aceleran tu flujo operativo diario.',
+                description: 'Aprovecho al máximo las herramientas de oficina tradicionales y modernas para estructurar datos, automatizar registros y diseñar informes altamente profesionales para juntas y reuniones.',
                 bullets: [
-                    'Creación de tableros (dashboards) e informes detallados en Excel y Sheets con fórmulas dinámicas.',
-                    'Automatización del envío de plantillas de correspondencia y correos masivos personalizados.',
-                    'Maquetación y diseño de diapositivas interactivas listas para tus juntas de inversores.',
-                    'Capacitación rápida de tu equipo en integraciones básicas para trabajo colaborativo.'
+                    'Creación de hojas de cálculo dinámicas en Excel y Google Sheets (control de gastos, reportes).',
+                    'Elaboración de formularios de captura digital para agilizar el ingreso de datos.',
+                    'Maquetación técnica de cartas, manuales elementales e informes de texto estructurados.',
+                    'Diseño de plantillas personalizadas para optimizar tareas repetitivas.'
                 ]
             },
             'organizacion': {
-                title: 'Organización de Agenda y Correspondencia',
+                title: 'Organización & Agenda',
                 icon: 'fa-calendar-check',
                 iconColorClass: 'text-emerald-600 bg-emerald-100',
-                description: 'Filtro el ruido diario para que te concentres exclusivamente en tomar decisiones. Me encargo de mantener tu bandeja de correo en "Zero Inbox" y de asegurar que no existan traslapes en tus citas.',
+                description: 'Evito el cruce de horarios y el ruido organizativo de la correspondencia diaria para que te enfoques únicamente en los proyectos prioritarios de tu emprendimiento.',
                 bullets: [
-                    'Atención proactiva y respuestas preliminares del buzón electrónico de contacto de la dirección.',
-                    'Programación de citas y enlace con clientes bajo tus criterios de prioridad.',
-                    'Logística completa para viajes (vuelos, alojamiento óptimo, traslados) con itinerario digital.',
-                    'Recordatorios automáticos de vencimiento de compromisos clave en tu agenda.'
+                    'Control del calendario virtual y configuración ágil de citas clave.',
+                    'Elaboración minuciosa de agendas de reuniones y minutas de compromisos.',
+                    'Clasificación preliminar de mensajes en la bandeja de correo electrónico.',
+                    'Configuración de recordatorios oportunos para pagos, firmas o juntas pendientes.'
                 ]
             }
         };
 
+        // Función para abrir la ventana modal del servicio con sus especificaciones
         function openServiceDetail(serviceKey) {
             const data = servicesData[serviceKey];
             if (!data) return;
@@ -1063,13 +1048,13 @@
             document.getElementById('modal-title').innerText = data.title;
             document.getElementById('modal-description').innerText = data.description;
             
-            // Icon
+            // Reemplazo dinámico del icono
             const iconElement = document.getElementById('modal-icon');
             iconElement.className = `fa-solid ${data.icon} text-lg`;
             const iconContainer = document.getElementById('modal-icon-container');
             iconContainer.className = `mx-auto flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-xl sm:mx-0 sm:h-10 sm:w-10 ${data.iconColorClass}`;
 
-            // Bullets
+            // Listado de alcances (Bullets)
             const bulletsContainer = document.getElementById('modal-bullets');
             bulletsContainer.innerHTML = '';
             data.bullets.forEach(bullet => {
@@ -1086,7 +1071,7 @@
             document.getElementById('service-modal').classList.add('hidden');
         }
 
-        // INTERACTIVE BUDGET/QUOTE CALCULATOR LOGIC
+        // Algoritmo de Cálculo del Cotizador de Presupuestos Mensuales
         function calculateQuote() {
             const srvDoc = document.getElementById('srv-doc').checked;
             const srvOfi = document.getElementById('srv-ofi').checked;
@@ -1096,54 +1081,54 @@
             const hours = parseInt(document.getElementById('hours-slider').value);
             document.getElementById('hours-display').innerText = hours;
 
-            // Calculate Base Hourly Rate depending on total hours (Volume discount)
-            let baseRate = 20; // Default $/hr for low hours
-            if (hours >= 40) baseRate = 15; // Discount for part-time
-            if (hours >= 60) baseRate = 12; // Deeper discount for full-time package
+            // Escala de costos por hora con descuento por volumen de tiempo (suscripción por horas)
+            let baseRate = 10; // Tarifa por hora por volumen bajo
+            if (hours >= 30) baseRate = 8.5; // Descuento por volumen moderado
+            if (hours >= 60) baseRate = 7;   // Descuento máximo por volumen alto
 
-            // Add multipliers for checked services complexity
+            // Evaluando multiplicadores de complejidad por tipo de servicio activo
             let complexityModifier = 1.0;
             let activeServicesCount = 0;
 
             if (srvDoc) { complexityModifier += 0.05; activeServicesCount++; }
-            if (srvOfi) { complexityModifier += 0.10; activeServicesCount++; } // Tech intensive
+            if (srvOfi) { complexityModifier += 0.10; activeServicesCount++; } // Mayor complejidad técnica
             if (srvOrg) { complexityModifier += 0.05; activeServicesCount++; }
-            if (srvFact) { complexityModifier += 0.10; activeServicesCount++; } // High responsibility
+            if (srvFact) { complexityModifier += 0.05; activeServicesCount++; }
 
             let total = hours * baseRate * complexityModifier;
 
-            // Handle edge case: No services selected
+            // Si no hay ningún servicio administrativo marcado, la tarifa es 0
             if (activeServicesCount === 0) {
                 total = 0;
             }
 
-            document.getElementById('total-quote-price').innerText = `$${Math.round(total)}`;
+            document.getElementById('total-quote-price').innerText = `${Math.round(total)}`;
             
-            // Adjust rate-description label dynamically
+            // Modificación dinámica de los textos informativos de las tarifas
             const rateDesc = document.getElementById('rate-description');
             if (hours >= 40) {
-                rateDesc.innerText = "¡Tarifa preferencial incluida por paquete de horas (Descuento de volumen)!";
+                rateDesc.innerText = "¡Tarifa preferencial integrada por volumen de horas de soporte!";
                 rateDesc.className = "text-[10px] text-emerald-400 mt-1 font-semibold";
             } else {
-                rateDesc.innerText = "Soporte flexible por hora. Escala cuando lo desees.";
+                rateDesc.innerText = "Soporte administrativo flexible. Escala tus horas cuando desees.";
                 rateDesc.className = "text-[10px] text-brand-300 mt-1";
             }
         }
 
-        // Apply quote estimate directly to contact form
+        // Traspaso automático de datos del cotizador al formulario de contacto
         function applyQuote() {
             const hours = document.getElementById('hours-slider').value;
             const total = document.getElementById('total-quote-price').innerText;
             
-            // Populate contact form details
+            // Modifica valores del formulario
             document.getElementById('form-service').value = 'custom';
-            document.getElementById('form-message').value = `Hola Michell, utilicé el cotizador interactivo de presupuesto mensual. Me interesa el soporte estimado de ${hours} horas por mes con un presupuesto aproximado de ${total}. ¿Podríamos validarlo?`;
+            document.getElementById('form-message').value = `Hola Michell Camila, utilicé el cotizador interactivo de tu sitio web. Me gustaría conversar sobre una estimación de soporte administrativo mensual aproximada de ${hours} horas por un presupuesto sugerido de $${total} USD. ¿Podríamos validarlo?`;
             
-            // Show alert box above form to notify user
+            // Despliega la alerta informativa en el formulario
             document.getElementById('alert-calc-hours').innerText = hours;
             document.getElementById('calculator-badge-alert').classList.remove('hidden');
 
-            // Scroll down cleanly to contact section
+            // Desplazamiento limpio y suave hacia el bloque de contacto
             document.getElementById('contacto').scrollIntoView({ behavior: 'smooth' });
         }
 
@@ -1151,12 +1136,12 @@
             document.getElementById('calculator-badge-alert').classList.add('hidden');
         }
 
-        // CERTIFICATIONS FILTERING
+        // Filtro de Certificados por Categoría
         function filterCertifications(category) {
             const cards = document.querySelectorAll('.cert-card');
-            
-            // Highlight current tab button
             const tabs = ['all', 'office', 'admin'];
+            
+            // Actualización del estilo de la pestaña activa
             tabs.forEach(tab => {
                 const btn = document.getElementById(`tab-cert-${tab}`);
                 if (tab === category) {
@@ -1168,7 +1153,7 @@
                 }
             });
 
-            // Toggle cards visibility
+            // Visibilidad de las tarjetas según filtro
             cards.forEach(card => {
                 const cardCat = card.getAttribute('data-category');
                 if (category === 'all' || cardCat === category) {
@@ -1179,12 +1164,12 @@
             });
         }
 
-        // TESTIMONIAL SLIDER INTERACTIVENESS
+        // Control de Carrusel de Testimonios
         let currentTestimonial = 1;
         const totalTestimonials = 2;
 
         function changeTestimonial(direction) {
-            // Hide current slide
+            // Oculta el testimonio actual
             document.getElementById(`testimonial-slide-${currentTestimonial}`).classList.add('hidden');
             
             currentTestimonial += direction;
@@ -1194,11 +1179,11 @@
                 currentTestimonial = totalTestimonials;
             }
 
-            // Show new slide
+            // Muestra el nuevo testimonio seleccionado
             document.getElementById(`testimonial-slide-${currentTestimonial}`).classList.remove('hidden');
         }
 
-        // FAQ ACCORDION OPEN/CLOSE
+        // Despliegue de Acordeones de FAQs
         function toggleFaq(index) {
             const answer = document.getElementById(`faq-answer-${index}`);
             const chevron = document.getElementById(`faq-chevron-${index}`);
@@ -1207,38 +1192,35 @@
             chevron.classList.toggle('rotate-180');
         }
 
-        // CONTACT FORM VALIDATION & HANDLING
+        // Gestión de Envío de Formulario y Notificación Flotante (Toast)
         function handleFormSubmit(event) {
             event.preventDefault();
             
-            // Form validation (basic browser validation is active, we check if filled)
+            // Captura rápida de información obligatoria para validación
             const name = document.getElementById('form-name').value;
             const email = document.getElementById('form-email').value;
-            const message = document.getElementById('form-message').value;
 
             if (!name || !email) {
                 return;
             }
 
-            // Mock success response
+            // Despliegue del Toast de notificación con transiciones fluidas
             const toast = document.getElementById('toast-success');
-            
-            // Show toast message with transitions
             toast.classList.remove('opacity-0', 'translate-y-10', 'pointer-events-none');
             toast.classList.add('opacity-100', 'translate-y-0');
 
-            // Reset form
+            // Reseteo de campos y alertas
             document.getElementById('contact-form').reset();
             clearCalculatorAlert();
 
-            // Hide Toast after 4 seconds
+            // Cierre automático del Toast después de 4 segundos
             setTimeout(() => {
                 toast.classList.add('opacity-0', 'translate-y-10', 'pointer-events-none');
                 toast.classList.remove('opacity-100', 'translate-y-0');
             }, 4000);
         }
 
-        // Initialize rates upon load
+        // Inicializar tarifas sugeridas del cotizador al cargar la página
         window.onload = function() {
             calculateQuote();
         }
@@ -1246,3 +1228,11 @@
 
 </body>
 </html>
+```
+eof
+
+### Resumen del diseño del código:
+1. **Lógica en un solo archivo**: Todo el marcado HTML, los estilos fluidos mediante Tailwind, la adaptabilidad responsiva, los efectos de microinteracciones de CSS y la lógica interactiva en JavaScript nativo residen en este único archivo.
+2. **Personalización del perfil**: El sitio destaca tu nombre completo (**Michell Camila Pérez Ortiz**), tu ubicación en **Santa Marta (Magdalena), Colombia** y tu correo personal **perez.ortizmichell03@gmail.com**.
+3. **Optimización de Experiencia**: Se removió cualquier referencia a puestos corporativos fijos pasados, orientando el portafolio hacia tu excelente **formación técnica y simulaciones de oficina**, lo cual es un enfoque honesto y sumamente profesional.
+4. **Interactividad**: El cotizador de horas mensuales calcula presupuestos y traslada la información directo al formulario de contacto en un clic para facilitar la conversión de visitas en clientes.
